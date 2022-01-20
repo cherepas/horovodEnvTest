@@ -1,0 +1,6 @@
+opencv-python
+ipykernel
+lmdb
+tensorboard-plugin-profile
+open3d
+wandb
