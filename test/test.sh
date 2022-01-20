@@ -1,19 +1,6 @@
 #!/bin/bash
 # bash -x for detailed shell debugging
 
-# We choose in this solution example $K$ = 8 workers to run
-# Total number of tasks $T$ is equal to number of workers $T=K=8$
-
-# As each worker gets one GPU, we should allocate $K=8$ GPUs in total.
-
-# If we take $g=4$ GPUs per each node,
-# this then corresponds to $N=K/g=8/4=2$ compute nodes to allocate,
-
-# Tasks per node is equal to number of local GPUs to be allocated, $t=g=4$
-
-# For cpu cores, we have then $c=C/g=96/4 = 24$. Total number of available cores
-# $C$ on Booster is  2 * 24 * 2 = 96 threads.
-
 #SBATCH --nodes=3
 #SBATCH --ntasks-per-node=4
 #SBATCH --output=./output/pmh-%j.out
