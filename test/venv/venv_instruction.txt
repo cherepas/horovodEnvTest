@@ -1,0 +1,12 @@
+Copy venv from https://gitlab.jsc.fz-juelich.de/MLDL_FZJ/juhaicu/jsc_public/sharedspace/teaching/intro_scalable_dl_2021/course2021_working_environment 
+Read file with requirements for my code and try to find module for every dependency using "module spider pytorch". Append the file modules.sh in the venv directory. 
+Write down packages that were not found as module to the requirements.txt. 
+Run "sh setup.sh"
+Run "source activate.sh"
+-> This should load modules and activate the venv.  You should see a prompt with your venv name.
+Run "create_kernel.sh"
+-> Should create the kernel file.
+Go to control panel, stop current jupyter lab connection and start it over. 
+-> Logout-login required
+Submit sh files "sbatch job.sh" where there is written "source " and path to the venv.
+Yes, for jobs you need to activate (the same activate.sh as in point 5).
